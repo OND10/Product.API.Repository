@@ -1,10 +1,10 @@
-﻿using MediatR;
-using ProductAPI.VSA.ExceptionHandler;
+﻿using ProductAPI.VSA.ExceptionHandler;
 
 namespace ProductAPI.Abstractions.Messaging
 {
-    public interface ICommandHandler<TCommand, TResponse> : IRequestHandler<TCommand, Result<TResponse>>
+    public interface ICommandHandler<TCommand, TResponse>
         where TCommand : ICommand<TResponse>
     {
+        Task<Result<TResponse>> Handle(TCommand command, CancellationToken cancellationToken);
     }
 }

@@ -1,10 +1,11 @@
 ﻿using MediatR;
 using OnMapper.Common.Exceptions;
+using ProductAPI.Abstractions.Messaging;
 using ProductAPI.VSA.Features.Products.Requests.DTOs;
 
 namespace ProductAPI.VSA.Features.Products.Requests.Commands
 {
-    public class AddProductCommand : IRequest<Result<ProductResponseDto>>
+    public class AddProductCommand :ICommand<ProductResponseDto>
     {
         public string Name { get; set; }
         public int NumberofProduct { get; set; }

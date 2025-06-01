@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI.VSA", "ProductAPI.VSA.csproj", "{4EF77778-8FA5-4926-9203-6480F4CA2522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductAPI.VSA", "ProductAPI.VSA.csproj", "{4EF77778-8FA5-4926-9203-6480F4CA2522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductUnitTest.VSA", "..\ProductUnitTest.VSA\ProductUnitTest.VSA.csproj", "{BD6B1883-C022-463B-A8C4-F27265CFD31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductUnitTest.VSA", "..\ProductUnitTest.VSA\ProductUnitTest.VSA.csproj", "{BD6B1883-C022-463B-A8C4-F27265CFD31D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.Gateway", "..\Yarp.Gateway\Yarp.Gateway.csproj", "{742AB043-FC68-4087-8B6F-FB24BD41AA4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PexelsDotNetSDK", "..\PexelsDotNetSDK\PexelsDotNetSDK.csproj", "{7D03D60C-6EAB-43B4-8768-DA48AE7774FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{BD6B1883-C022-463B-A8C4-F27265CFD31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD6B1883-C022-463B-A8C4-F27265CFD31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD6B1883-C022-463B-A8C4-F27265CFD31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742AB043-FC68-4087-8B6F-FB24BD41AA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742AB043-FC68-4087-8B6F-FB24BD41AA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742AB043-FC68-4087-8B6F-FB24BD41AA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742AB043-FC68-4087-8B6F-FB24BD41AA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D03D60C-6EAB-43B4-8768-DA48AE7774FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D03D60C-6EAB-43B4-8768-DA48AE7774FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D03D60C-6EAB-43B4-8768-DA48AE7774FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D03D60C-6EAB-43B4-8768-DA48AE7774FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

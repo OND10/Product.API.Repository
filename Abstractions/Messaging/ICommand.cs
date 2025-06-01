@@ -1,10 +1,7 @@
 ﻿
-using MediatR;
-using ProductAPI.VSA.ExceptionHandler;
 
-namespace ProductAPI.Abstractions.Messaging
-{
-    public interface ICommand<TResponse> : IRequest<Result<TResponse>>
-    {
-    }
-}
+namespace ProductAPI.Abstractions.Messaging;
+
+public interface ICommand : IBaseCommand { };
+public interface ICommand<TResponse> : IBaseCommand { };
+public interface IBaseCommand { };

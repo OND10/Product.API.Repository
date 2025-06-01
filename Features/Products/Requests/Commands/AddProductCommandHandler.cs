@@ -1,13 +1,14 @@
 ﻿using MediatR;
 using OnMapper;
-using OnMapper.Common.Exceptions;
+using ProductAPI.Abstractions.Messaging;
 using ProductAPI.VSA.Domain;
+using ProductAPI.VSA.ExceptionHandler;
 using ProductAPI.VSA.Features.Products.Repository.Interface;
 using ProductAPI.VSA.Features.Products.Requests.DTOs;
 
 namespace ProductAPI.VSA.Features.Products.Requests.Commands
 {
-    public class AddProductCommandHandler : IRequestHandler<AddProductCommand, Result<ProductResponseDto>>
+    public class AddProductCommandHandler : ICommandHandler<AddProductCommand, ProductResponseDto>
     {
         private readonly IProductRepository _repository;
         private readonly IUnitofWork _unitofWork;
@@ -18,13 +19,14 @@ namespace ProductAPI.VSA.Features.Products.Requests.Commands
             _unitofWork = unitofWork;
             _mapper = mapper;
         }
+
         public async Task<Result<ProductResponseDto>> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             var model = await _mapper.Map<AddProductCommand, Product>(request);
             var result = await _repository.CreateAsync(model.Data);
             await _unitofWork.SaveChangesAsync();
             var mappedResult = await _mapper.Map<Product, ProductResponseDto>(result);
-            
+
             return await Result<ProductResponseDto>.SuccessAsync(mappedResult.Data, "Created Successfully", true);
         }
     }
